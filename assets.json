@@ -1,0 +1,69 @@
+{
+  "assets": [
+    {
+      "name": "icon_1024",
+      "type": "icon",
+      "prompt": "App icon, one single glossy 3D cartoon white farm chicken, centered, deep teal radial gradient background, crisp, no text"
+    },
+    {
+      "name": "bg_splash",
+      "type": "bg",
+      "prompt": "Vertical 9:16 mobile game loader background, dusk countryside creek, deep teal and dark green, soft mist, cinematic, no text, no UI"
+    },
+    {
+      "name": "bg_menu",
+      "type": "bg",
+      "prompt": "Vertical 9:16 mobile game menu background, sunny countryside valley with a calm river and green meadows, warm terracotta roofs, vibrant 3D render, no text, no UI"
+    },
+    {
+      "name": "bg_game",
+      "type": "bg",
+      "prompt": "Vertical 9:16 mobile game background, soft blurred countryside meadow and pale mint water, low contrast for UI overlay, no text, no UI"
+    },
+    {
+      "name": "bg_result",
+      "type": "bg",
+      "prompt": "Vertical 9:16 mobile game result background, warm golden hour farm field with straw bales, soft bokeh, no text, no UI"
+    },
+    {
+      "name": "sprite_chicken",
+      "type": "sprite",
+      "prompt": "One single cute cartoon white farm chicken, centered icon, glossy 3D render, isolated on plain white, no other objects"
+    },
+    {
+      "name": "sprite_chick",
+      "type": "sprite",
+      "prompt": "One single cute cartoon yellow baby chick, centered icon, glossy 3D render, isolated on plain white, no other objects"
+    },
+    {
+      "name": "sprite_plank_straight",
+      "type": "sprite",
+      "prompt": "One single straight wooden bridge plank, top down view, centered icon, glossy 3D render, isolated on plain white, no other objects"
+    },
+    {
+      "name": "sprite_plank_corner",
+      "type": "sprite",
+      "prompt": "One single L shaped wooden bridge plank corner piece, top down view, centered icon, glossy 3D render, isolated on plain white, no other objects"
+    },
+    {
+      "name": "sprite_coop",
+      "type": "sprite",
+      "prompt": "One single small wooden chicken coop, centered icon, glossy 3D render, isolated on plain white, no other objects"
+    },
+    {
+      "name": "sprite_barn",
+      "type": "sprite",
+      "prompt": "One single red farm barn with white trim, centered icon, glossy 3D render, isolated on plain white, no other objects"
+    },
+    {
+      "name": "sprite_cart",
+      "type": "sprite",
+      "prompt": "One single wooden farm hand cart with two wheels, side view, centered icon, glossy 3D render, isolated on plain white, no other objects"
+    },
+    {
+      "name": "sprite_medal_gold",
+      "type": "sprite",
+      "prompt": "One single gold medal on a short ribbon, centered icon, glossy 3D render, isolated on plain white, no other objects"
+    }
+  ]
+}

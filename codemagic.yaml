@@ -1,0 +1,66 @@
+# cm-build-kotlin.yaml (native Kotlin, template-kotlin) — Codemagic workflow for API-driven builds.
+# cm-prepare.sh copies this into the pushed repo as codemagic.yaml when the project has
+# android/app/build.gradle.kts and neither pubspec.yaml nor package.json.
+# Same shape as cm-build.yaml (RN) minus the npm steps: signing creds arrive as per-build
+# env vars MYAPP_RELEASE_* and are passed to AGP as -Pandroid.injected.signing.* (the
+# template build.gradle.kts has no signing config at all). Toolchain: Gradle 9.6 wrapper,
+# AGP 9.4.1, compileSdk 37.1 — the SDK step installs platforms;android-37.1 + build-tools 37.0.0. Serves both the pre-review compile
+# (build-apk-cloud.sh, CM_TEST_BUILD=1) and the final AAB; build-logs/*.log are published
+# even on failure so cm-fetch-aab.sh can hand the compile error to heal-build.sh.
+workflows:
+  android-release:
+    name: Android Release Build (native Kotlin)
+    max_build_duration: 60
+    environment:
+      java: 17
+    scripts:
+      - name: Prepare build logs
+        script: mkdir -p build-logs
+      # compileSdk/targetSdk 36 — the platform may be missing from the runner image, AGP will not fetch it.
+      - name: Ensure Android SDK 37.1
+        script: |
+          # sdkmanager is NOT always on PATH: on Codemagic mac_mini_m2 the bare call failed
+          # with exit 127 "command not found" and killed the build before Gradle (ANDROID-3447,
+          # 2026-09-09). Resolve the binary via ANDROID_SDK_ROOT/ANDROID_HOME — the same
+          # way cm-build-unity.yaml does. Not found -> warn, not fail.
+          SDK_ROOT="${ANDROID_SDK_ROOT:-${ANDROID_HOME:-$HOME/programs/android-sdk-macosx}}"
+          SDKMAN=""
+          if command -v sdkmanager >/dev/null 2>&1; then
+            SDKMAN="$(command -v sdkmanager)"
+          else
+            for c in "$SDK_ROOT/cmdline-tools/latest/bin/sdkmanager" \
+                     "$SDK_ROOT/cmdline-tools/bin/sdkmanager" \
+                     "$SDK_ROOT/tools/bin/sdkmanager"; do
+              if [ -x "$c" ]; then SDKMAN="$c"; break; fi
+            done
+          fi
+          if [ -z "$SDKMAN" ]; then
+            SDKMAN="$(ls -1 "$SDK_ROOT"/cmdline-tools/*/bin/sdkmanager 2>/dev/null | head -1)"
+          fi
+          if [ -z "$SDKMAN" ]; then
+            echo "WARN: sdkmanager not found (SDK_ROOT=$SDK_ROOT) — skipping platforms;android-37.1, handing the build over as is"
+            exit 0
+          fi
+          echo "sdkmanager: $SDKMAN (sdk_root=$SDK_ROOT)"
+          yes | "$SDKMAN" --sdk_root="$SDK_ROOT" --licenses > /dev/null 2>&1 || true
+          "$SDKMAN" --sdk_root="$SDK_ROOT" "platforms;android-37.1" "build-tools;37.0.0"
+      - name: Decode keystore
+        script: |
+          mkdir -p android/app
+          echo "$MYAPP_RELEASE_KEYSTORE_BASE64" | base64 -d > android/app/release.keystore
+          ls -lh android/app/release.keystore
+      - name: Gradle bundleRelease + assembleRelease
+        script: |
+          set -o pipefail
+          cd android
+          chmod +x ./gradlew
+          ./gradlew --no-daemon clean bundleRelease assembleRelease \
+            -Pandroid.injected.signing.store.file="$CM_BUILD_DIR/android/app/release.keystore" \
+            -Pandroid.injected.signing.store.password="$MYAPP_RELEASE_STORE_PASSWORD" \
+            -Pandroid.injected.signing.key.alias="$MYAPP_RELEASE_KEY_ALIAS" \
+            -Pandroid.injected.signing.key.password="$MYAPP_RELEASE_KEY_PASSWORD" \
+            2>&1 | tee "$CM_BUILD_DIR/build-logs/gradle.log"
+    artifacts:
+      - android/app/build/outputs/bundle/release/*.aab
+      - android/app/build/outputs/apk/release/*.apk
+      - build-logs/*.log

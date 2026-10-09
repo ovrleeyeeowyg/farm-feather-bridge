@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/space_l">
+
+    <LinearLayout
+        android:id="@+id/panelSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_dialog_panel"
+        android:orientation="vertical"
+        android:padding="@dimen/dialog_padding">
+
+        <TextView
+            android:id="@+id/txtSettingsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_title"
+            android:textAppearance="@style/TextAppearance.App.Title" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchSound"
+            style="@style/Widget.App.Switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_m"
+            android:text="@string/settings_sound" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchCartFlash"
+            style="@style/Widget.App.Switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_s"
+            android:text="@string/settings_cart_flash" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchLargeLabels"
+            style="@style/Widget.App.Switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_s"
+            android:text="@string/settings_large_labels" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnResetProgress"
+            style="@style/Widget.App.Button.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_secondary_height"
+            android:layout_marginTop="@dimen/space_l"
+            android:text="@string/action_reset_progress" />
+
+        <TextView
+            android:id="@+id/txtAboutTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_l"
+            android:text="@string/settings_about_title"
+            android:textAppearance="@style/TextAppearance.App.Label" />
+
+        <TextView
+            android:id="@+id/txtAboutOffline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xs"
+            android:text="@string/settings_about_offline"
+            android:textAppearance="@style/TextAppearance.App.Small" />
+
+        <TextView
+            android:id="@+id/txtAboutVersion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_version"
+            android:textAppearance="@style/TextAppearance.App.Small" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCloseSettings"
+            style="@style/Widget.App.Button.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_secondary_height"
+            android:layout_marginTop="@dimen/space_l"
+            android:text="@string/action_close"
+            app:icon="@drawable/ic_close" />
+
+    </LinearLayout>
+
+</RelativeLayout>

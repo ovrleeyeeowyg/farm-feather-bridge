@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.App.Display" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="android:textSize">@dimen/text_display</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.06</item>
+        <item name="android:textColor">@color/farm_splash_title</item>
+    </style>
+
+    <style name="TextAppearance.App.Headline" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:textSize">@dimen/text_headline</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:textColor">@color/farm_text</item>
+    </style>
+
+    <style name="TextAppearance.App.Title" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">@dimen/text_title</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/farm_text</item>
+    </style>
+
+    <style name="TextAppearance.App.Score" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">@dimen/text_score</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFeatureSettings">tnum</item>
+        <item name="android:textColor">@color/farm_text</item>
+    </style>
+
+    <style name="TextAppearance.App.Body" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textSize">@dimen/text_body</item>
+        <item name="android:lineSpacingExtra">3dp</item>
+        <item name="android:textColor">@color/farm_text_muted</item>
+    </style>
+
+    <style name="TextAppearance.App.Small" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="android:textColor">@color/farm_text_muted</item>
+    </style>
+
+    <style name="TextAppearance.App.Label" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:textSize">@dimen/text_label</item>
+        <item name="android:letterSpacing">0.18</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/farm_text_faint</item>
+    </style>
+
+    <style name="ShapeAppearance.App.SheetTop" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">@dimen/sheet_corner</item>
+        <item name="cornerSizeTopRight">@dimen/sheet_corner</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+    <style name="ShapeAppearance.App.ControlsTop" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">24dp</item>
+        <item name="cornerSizeTopRight">24dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+    <style name="ShapeAppearance.App.HeaderBottom" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeBottomLeft">20dp</item>
+        <item name="cornerSizeBottomRight">20dp</item>
+    </style>
+
+    <style name="Widget.App.Button.Primary" parent="Widget.Material3.Button">
+        <item name="android:minHeight">@dimen/button_game_height</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:textColor">@color/farm_text_inverse</item>
+        <item name="android:elevation">8dp</item>
+        <item name="backgroundTint">@color/farm_primary</item>
+        <item name="cornerRadius">18dp</item>
+        <item name="rippleColor">@color/farm_ripple_light</item>
+        <item name="iconSize">24dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">10dp</item>
+        <item name="iconTint">@color/farm_text_inverse</item>
+    </style>
+
+    <style name="Widget.App.Button.Secondary" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">@dimen/button_secondary_height</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.04</item>
+        <item name="android:textColor">@color/farm_accent</item>
+        <item name="strokeColor">@color/farm_accent</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="backgroundTint">@color/farm_surface</item>
+        <item name="rippleColor">@color/farm_accent_light</item>
+        <item name="iconSize">20dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconTint">@color/farm_accent</item>
+    </style>
+
+    <style name="Widget.App.Button.Text" parent="Widget.Material3.Button.TextButton">
+        <item name="android:minHeight">@dimen/button_secondary_height</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/farm_danger</item>
+        <item name="rippleColor">@color/farm_ripple_light</item>
+    </style>
+
+    <style name="Widget.App.Button.Icon" parent="Widget.Material3.Button.IconButton">
+        <item name="android:minWidth">@dimen/button_icon_size</item>
+        <item name="android:minHeight">@dimen/button_icon_size</item>
+        <item name="iconSize">24dp</item>
+        <item name="iconTint">@color/farm_text</item>
+        <item name="rippleColor">@color/farm_accent_light</item>
+    </style>
+
+    <style name="Widget.App.Button.Chip" parent="Widget.Material3.Button">
+        <item name="android:minWidth">@dimen/chip_size</item>
+        <item name="android:minHeight">@dimen/chip_size</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/farm_text_inverse</item>
+        <item name="android:elevation">3dp</item>
+        <item name="backgroundTint">@color/farm_accent</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="rippleColor">@color/farm_ripple_light</item>
+    </style>
+
+    <style name="Widget.App.Card.Surface" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/farm_surface</item>
+        <item name="cardCornerRadius">@dimen/card_corner</item>
+        <item name="cardElevation">6dp</item>
+        <item name="strokeColor">@color/farm_surface_stroke</item>
+        <item name="strokeWidth">2dp</item>
+    </style>
+
+    <style name="Widget.App.Switch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
+        <item name="android:minHeight">@dimen/button_secondary_height</item>
+        <item name="android:textAppearance">@style/TextAppearance.App.Body</item>
+        <item name="android:textColor">@color/farm_text</item>
+    </style>
+
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.FarmFeatherBridge" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/farm_primary</item>
+        <item name="colorOnPrimary">@color/farm_text_inverse</item>
+        <item name="colorPrimaryContainer">@color/farm_secondary</item>
+        <item name="colorOnPrimaryContainer">@color/farm_text</item>
+        <item name="colorSecondary">@color/farm_accent</item>
+        <item name="colorOnSecondary">@color/farm_text_inverse</item>
+        <item name="colorTertiary">@color/farm_secondary</item>
+        <item name="colorOnTertiary">@color/farm_text</item>
+        <item name="colorSurface">@color/farm_surface</item>
+        <item name="colorOnSurface">@color/farm_text</item>
+        <item name="colorSurfaceVariant">@color/farm_bg_deep</item>
+        <item name="colorOnSurfaceVariant">@color/farm_text_muted</item>
+        <item name="colorOutline">@color/farm_surface_stroke</item>
+        <item name="colorError">@color/farm_danger</item>
+        <item name="android:colorBackground">@color/farm_bg</item>
+        <item name="android:windowBackground">@drawable/bg_window_launch</item>
+        <item name="android:statusBarColor">@color/farm_bg_deep</item>
+        <item name="android:navigationBarColor">@color/farm_bg_deep</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="materialButtonStyle">@style/Widget.App.Button.Primary</item>
+    </style>
+</resources>

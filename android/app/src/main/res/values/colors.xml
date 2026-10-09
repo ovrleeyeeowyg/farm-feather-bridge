@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brand_primary">#D96B3B</color>
+    <color name="brand_on_primary">#FBF6EC</color>
+    <color name="brand_secondary">#328F84</color>
+    <color name="brand_on_secondary">#FBF6EC</color>
+    <color name="brand_background">#EAF8F6</color>
+    <color name="brand_surface">#FBF6EC</color>
+    <color name="brand_on_surface">#21343A</color>
+
+    <color name="farm_bg">#EAF8F6</color>
+    <color name="farm_bg_deep">#D7EDE9</color>
+    <color name="farm_surface">#FBF6EC</color>
+    <color name="farm_surface_stroke">#E0CDA9</color>
+    <color name="farm_primary">#D96B3B</color>
+    <color name="farm_primary_dark">#B4512A</color>
+    <color name="farm_accent">#328F84</color>
+    <color name="farm_accent_light">#5CB8AC</color>
+    <color name="farm_secondary">#EAC65A</color>
+    <color name="farm_wood">#8C5A33</color>
+    <color name="farm_wood_light">#A9703F</color>
+    <color name="farm_water">#9DCEDB</color>
+    <color name="farm_water_light">#C4E4EC</color>
+    <color name="farm_grass">#C9E2C4</color>
+    <color name="farm_road">#D8C9A8</color>
+    <color name="farm_road_line">#B49A6C</color>
+    <color name="farm_rock">#A9A49B</color>
+    <color name="farm_text">#21343A</color>
+    <color name="farm_text_muted">#52666D</color>
+    <color name="farm_text_faint">#8AA0A6</color>
+    <color name="farm_text_inverse">#FBF6EC</color>
+    <color name="farm_success">#4F9D69</color>
+    <color name="farm_danger">#C2452F</color>
+    <color name="farm_dusk_top">#103034</color>
+    <color name="farm_dusk_mid">#1B4F4A</color>
+    <color name="farm_dusk_deep">#0E272B</color>
+    <color name="farm_splash_title">#FBF6EC</color>
+    <color name="farm_splash_subtitle">#9FD3CB</color>
+    <color name="farm_splash_status">#7FB3AA</color>
+    <color name="farm_route_glow">#66EAC65A</color>
+    <color name="farm_dim">#99000000</color>
+    <color name="farm_ripple_light">#33FBF6EC</color>
+    <color name="farm_medal_silver">#C9CDD2</color>
+    <color name="farm_medal_bronze">#B07A4A</color>
+    <color name="farm_medal_none">#C4CBCD</color>
+</resources>

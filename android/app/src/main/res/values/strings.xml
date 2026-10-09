@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Farm Feather Bridge</string>
+
+    <string name="splash_title">FARM FEATHER\nBRIDGE</string>
+    <string name="splash_subtitle">BRING THE FLOCK HOME</string>
+    <string name="splash_status_waking">WAKING THE FLOCK…</string>
+    <string name="splash_status_creek">LOADING THE CREEK…</string>
+    <string name="splash_status_planks">STACKING THE PLANKS…</string>
+    <string name="splash_status_ready">THE BARN IS READY…</string>
+
+    <string name="menu_title">FARM FEATHER BRIDGE</string>
+    <string name="menu_tagline">Lay the planks · Time the cart · Bring every bird home</string>
+    <string name="menu_tagline_fresh">Your first flock is waiting at the coop</string>
+
+    <string name="action_play">PLAY</string>
+    <string name="action_medal_barn">MEDAL BARN</string>
+    <string name="action_settings">SETTINGS</string>
+    <string name="action_send_flock">SEND FLOCK</string>
+    <string name="action_play_again">PLAY AGAIN</string>
+    <string name="action_menu">MENU</string>
+    <string name="action_next_mission">NEXT MISSION</string>
+    <string name="action_close">CLOSE</string>
+    <string name="action_retry">RETRY</string>
+    <string name="action_reset_progress">RESET PROGRESS</string>
+    <string name="action_reset_confirm">TAP AGAIN TO CONFIRM</string>
+
+    <string name="stat_medals">MEDALS</string>
+    <string name="stat_coins">COINS</string>
+    <string name="stat_best">BEST</string>
+    <string name="stat_flock">FLOCK</string>
+    <string name="stat_planks">PLANKS</string>
+    <string name="stat_cart">CART</string>
+    <string name="stat_saved">SAVED</string>
+    <string name="stat_planks_left">PLANKS LEFT</string>
+    <string name="stat_time">TIME</string>
+    <string name="stat_score">SCORE</string>
+
+    <string name="mission_label">MISSION %1$d</string>
+    <string name="game_hint">Tap water to lay a plank · Tap a plank to turn it</string>
+    <string name="game_timer_start">00:45</string>
+    <string name="piece_picker_label">TRAY</string>
+
+    <string name="result_gold">FLOCK IS HOME</string>
+    <string name="result_silver">GOOD CROSSING</string>
+    <string name="result_bronze">A FEW STRAYED</string>
+    <string name="result_none">NO LUCK</string>
+    <string name="result_coins">+%1$d CORN COINS</string>
+    <string name="result_coins_note">Virtual only — no real value</string>
+    <string name="result_save_error">Progress could not be saved — your medals are safe on this device</string>
+
+    <string name="medal_gold">GOLD</string>
+    <string name="medal_silver">SILVER</string>
+    <string name="medal_bronze">BRONZE</string>
+    <string name="medal_none">NO MEDAL</string>
+
+    <string name="medal_barn_title">MEDAL BARN</string>
+    <string name="medal_barn_subtitle">Route medals you have earned</string>
+    <string name="medal_barn_empty">No medals yet — the barn is waiting</string>
+    <string name="medal_row_locked">Not crossed yet</string>
+    <string name="medal_row_best">Best %1$s</string>
+
+    <string name="settings_title">SETTINGS</string>
+    <string name="settings_sound">Sound effects</string>
+    <string name="settings_cart_flash">Cart warning flash</string>
+    <string name="settings_large_labels">Larger board labels</string>
+    <string name="settings_about_title">ABOUT</string>
+    <string name="settings_about_offline">Offline play · no purchases · no tracking</string>
+    <string name="settings_version">Version 1.0</string>
+    <string name="settings_state_on">on</string>
+    <string name="settings_state_off">off</string>
+
+    <string name="cd_hero_chicken">Farm chicken mascot</string>
+    <string name="cd_back">Back to the menu</string>
+    <string name="cd_medal">Route medal</string>
+    <string name="cd_piece_straight">Straight plank</string>
+    <string name="cd_piece_corner">Corner plank</string>
+    <string name="cd_mission_unlocked">Mission %1$d unlocked</string>
+    <string name="cd_mission_current">Mission %1$d selected</string>
+    <string name="cd_mission_locked">Mission %1$d locked</string>
+    <string name="cd_send_locked">Lay a full route from the coop to the barn first</string>
+    <string name="cd_send_ready">Route ready, send the flock</string>
+    <string name="cd_board">Bridge board, tap water to lay a plank</string>
+    <string name="cd_selected">selected</string>
+    <string name="cd_not_selected">not selected</string>
+    <string name="cd_medal_tier">Medal tier %1$s</string>
+</resources>

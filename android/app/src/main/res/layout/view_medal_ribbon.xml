@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/imgMedal"
+        android:layout_width="@dimen/medal_sprite_size"
+        android:layout_height="@dimen/medal_sprite_size"
+        android:contentDescription="@string/cd_medal"
+        android:scaleType="fitCenter"
+        android:src="@drawable/sprite_medal_gold" />
+
+    <TextView
+        android:id="@+id/txtMedalTier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_s"
+        android:gravity="center"
+        android:letterSpacing="0.14"
+        android:maxLines="1"
+        android:textColor="@color/farm_wood"
+        android:textSize="@dimen/text_small"
+        android:textStyle="bold" />
+
+</merge>

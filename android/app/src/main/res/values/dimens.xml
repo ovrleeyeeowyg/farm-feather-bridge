@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="space_xs">4dp</dimen>
+    <dimen name="space_s">8dp</dimen>
+    <dimen name="space_m">12dp</dimen>
+    <dimen name="space_l">16dp</dimen>
+    <dimen name="space_xl">20dp</dimen>
+    <dimen name="space_xxl">28dp</dimen>
+
+    <dimen name="screen_gutter">16dp</dimen>
+    <dimen name="sheet_padding">20dp</dimen>
+    <dimen name="sheet_corner">28dp</dimen>
+    <dimen name="card_corner">20dp</dimen>
+    <dimen name="card_corner_small">16dp</dimen>
+
+    <dimen name="button_primary_height">60dp</dimen>
+    <dimen name="button_game_height">56dp</dimen>
+    <dimen name="button_secondary_height">48dp</dimen>
+    <dimen name="button_icon_size">48dp</dimen>
+    <dimen name="chip_size">48dp</dimen>
+
+    <dimen name="header_height">72dp</dimen>
+    <dimen name="stat_strip_height">60dp</dimen>
+    <dimen name="stat_card_padding">8dp</dimen>
+    <dimen name="stat_dot_size">10dp</dimen>
+
+    <dimen name="splash_medallion_size">148dp</dimen>
+    <dimen name="splash_chicken_size">92dp</dimen>
+    <dimen name="splash_progress_width">180dp</dimen>
+    <dimen name="splash_ghost_width">86dp</dimen>
+    <dimen name="splash_ghost_height">18dp</dimen>
+
+    <dimen name="menu_hero_size">118dp</dimen>
+    <dimen name="board_max_width">340dp</dimen>
+    <dimen name="piece_tile_size">72dp</dimen>
+    <dimen name="piece_sprite_size">50dp</dimen>
+    <dimen name="badge_size">22dp</dimen>
+
+    <dimen name="medal_ribbon_width">140dp</dimen>
+    <dimen name="medal_ribbon_height">168dp</dimen>
+    <dimen name="medal_sprite_size">88dp</dimen>
+    <dimen name="medal_sprite_compact">40dp</dimen>
+    <dimen name="medal_ribbon_compact">56dp</dimen>
+
+    <dimen name="dialog_list_height">272dp</dimen>
+    <dimen name="dialog_padding">20dp</dimen>
+
+    <dimen name="text_display">38sp</dimen>
+    <dimen name="text_headline">26sp</dimen>
+    <dimen name="text_title">20sp</dimen>
+    <dimen name="text_score">22sp</dimen>
+    <dimen name="text_body">15sp</dimen>
+    <dimen name="text_small">13sp</dimen>
+    <dimen name="text_label">11sp</dimen>
+</resources>

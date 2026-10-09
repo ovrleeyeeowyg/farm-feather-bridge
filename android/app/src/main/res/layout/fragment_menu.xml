@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/menuRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_menu_base">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideSheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.46" />
+
+    <ImageView
+        android:id="@+id/imgMenuArt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_menu"
+        app:layout_constraintBottom_toBottomOf="@id/guideSheet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewMenuFade"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/overlay_menu_fade"
+        app:layout_constraintBottom_toBottomOf="@id/imgMenuArt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imgMenuArt" />
+
+    <ImageView
+        android:id="@+id/imgMenuChicken"
+        android:layout_width="@dimen/menu_hero_size"
+        android:layout_height="@dimen/menu_hero_size"
+        android:layout_marginEnd="18dp"
+        android:contentDescription="@string/cd_hero_chicken"
+        android:scaleType="fitCenter"
+        android:src="@drawable/sprite_chicken"
+        app:layout_constraintBottom_toBottomOf="@id/imgMenuArt"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardMenuSheet"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="@color/farm_surface"
+        app:cardElevation="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideSheet"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.App.SheetTop"
+        app:strokeColor="@color/farm_surface_stroke"
+        app:strokeWidth="2dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/viewSheetGrain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_sheet_grain" />
+
+            <LinearLayout
+                android:id="@+id/menuSheetContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/sheet_padding"
+                android:paddingTop="@dimen/space_l"
+                android:paddingEnd="@dimen/sheet_padding"
+                android:paddingBottom="@dimen/sheet_padding">
+
+                <TextView
+                    android:id="@+id/txtMenuTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/menu_title"
+                    android:textAppearance="@style/TextAppearance.App.Headline" />
+
+                <TextView
+                    android:id="@+id/txtMenuTagline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_xs"
+                    android:text="@string/menu_tagline"
+                    android:textAppearance="@style/TextAppearance.App.Small" />
+
+                <HorizontalScrollView
+                    android:id="@+id/scrollMissions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_m"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/containerMissions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" />
+
+                </HorizontalScrollView>
+
+                <LinearLayout
+                    android:id="@+id/rowMenuStats"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_m"
+                    android:orientation="horizontal">
+
+                    <com.farmfeather.bridge.core.ui.StatCardView
+                        android:id="@+id/statMenuMedals"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/space_s"
+                        android:layout_weight="1" />
+
+                    <com.farmfeather.bridge.core.ui.StatCardView
+                        android:id="@+id/statMenuCoins"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/space_s"
+                        android:layout_weight="1" />
+
+                    <com.farmfeather.bridge.core.ui.StatCardView
+                        android:id="@+id/statMenuBest"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPlay"
+                    style="@style/Widget.App.Button.Primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_primary_height"
+                    android:layout_marginTop="@dimen/space_l"
+                    android:text="@string/action_play"
+                    app:icon="@drawable/ic_play" />
+
+                <LinearLayout
+                    android:id="@+id/rowMenuActions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_m"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMedalBarn"
+                        style="@style/Widget.App.Button.Secondary"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/button_secondary_height"
+                        android:layout_marginEnd="@dimen/space_s"
+                        android:layout_weight="1"
+                        android:text="@string/action_medal_barn"
+                        app:icon="@drawable/ic_barn" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSettings"
+                        style="@style/Widget.App.Button.Secondary"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/button_secondary_height"
+                        android:layout_weight="1"
+                        android:text="@string/action_settings"
+                        app:icon="@drawable/ic_settings" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

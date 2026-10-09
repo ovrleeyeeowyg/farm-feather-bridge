@@ -1,0 +1,8 @@
+{
+  "outcome": "succeeded",
+  "fix_type": "transient",
+  "resume_from": "codegen",
+  "message": "Pipeline resumed from codegen and finished.",
+  "log": "projects/FarmFeatherBridge/.resume-20261009-154142.log",
+  "attempted_at_epoch": 1791553304
+}

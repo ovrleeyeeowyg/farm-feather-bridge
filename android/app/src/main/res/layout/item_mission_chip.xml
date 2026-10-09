@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.button.MaterialButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/btnMissionChip"
+    style="@style/Widget.App.Button.Chip"
+    android:layout_width="@dimen/chip_size"
+    android:layout_height="@dimen/chip_size"
+    android:layout_marginEnd="@dimen/space_s" />

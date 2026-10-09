@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/splashRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_window_launch">
+
+    <ImageView
+        android:id="@+id/imgSplashBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_splash"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewSplashOverlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/overlay_splash_dusk"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/ghostPlankOne"
+        android:layout_width="@dimen/splash_ghost_width"
+        android:layout_height="@dimen/splash_ghost_height"
+        android:layout_marginStart="26dp"
+        android:background="@drawable/shape_plank_ghost"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.14" />
+
+    <View
+        android:id="@+id/ghostPlankTwo"
+        android:layout_width="@dimen/splash_ghost_width"
+        android:layout_height="@dimen/splash_ghost_height"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/shape_plank_ghost"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.27" />
+
+    <View
+        android:id="@+id/ghostPlankThree"
+        android:layout_width="@dimen/splash_ghost_width"
+        android:layout_height="@dimen/splash_ghost_height"
+        android:layout_marginStart="52dp"
+        android:background="@drawable/shape_plank_ghost"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.82" />
+
+    <FrameLayout
+        android:id="@+id/splashMedallion"
+        android:layout_width="@dimen/splash_medallion_size"
+        android:layout_height="@dimen/splash_medallion_size"
+        android:background="@drawable/shape_splash_medallion"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toTopOf="@id/txtSplashTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <ImageView
+            android:id="@+id/imgSplashChicken"
+            android:layout_width="@dimen/splash_chicken_size"
+            android:layout_height="@dimen/splash_chicken_size"
+            android:layout_gravity="center"
+            android:contentDescription="@string/cd_hero_chicken"
+            android:scaleType="fitCenter"
+            android:src="@drawable/sprite_chicken" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/txtSplashTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xxl"
+        android:gravity="center"
+        android:lineSpacingExtra="2dp"
+        android:shadowColor="#80000000"
+        android:shadowDy="3"
+        android:shadowRadius="6"
+        android:text="@string/splash_title"
+        android:textAppearance="@style/TextAppearance.App.Display"
+        app:layout_constraintBottom_toTopOf="@id/txtSplashSubtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/splashMedallion" />
+
+    <TextView
+        android:id="@+id/txtSplashSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_m"
+        android:letterSpacing="0.22"
+        android:text="@string/splash_subtitle"
+        android:textColor="@color/farm_splash_subtitle"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintBottom_toTopOf="@id/progressSplash"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtSplashTitle" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressSplash"
+        android:layout_width="@dimen/splash_progress_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xxl"
+        android:indeterminate="true"
+        app:indicatorColor="@color/farm_secondary"
+        app:layout_constraintBottom_toTopOf="@id/txtSplashStatus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtSplashSubtitle"
+        app:trackColor="#3A2F6B64"
+        app:trackCornerRadius="3dp"
+        app:trackThickness="6dp" />
+
+    <TextView
+        android:id="@+id/txtSplashStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_l"
+        android:accessibilityLiveRegion="polite"
+        android:letterSpacing="0.18"
+        android:text="@string/splash_status_waking"
+        android:textColor="@color/farm_splash_status"
+        android:textSize="@dimen/text_label"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progressSplash" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

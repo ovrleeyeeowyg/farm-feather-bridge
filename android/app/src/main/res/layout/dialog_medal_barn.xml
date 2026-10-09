@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/space_l">
+
+    <LinearLayout
+        android:id="@+id/panelMedalBarn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_dialog_panel"
+        android:orientation="vertical"
+        android:padding="@dimen/dialog_padding">
+
+        <TextView
+            android:id="@+id/txtMedalBarnTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/medal_barn_title"
+            android:textAppearance="@style/TextAppearance.App.Title" />
+
+        <TextView
+            android:id="@+id/txtMedalBarnSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xs"
+            android:text="@string/medal_barn_subtitle"
+            android:textAppearance="@style/TextAppearance.App.Small" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dialog_list_height"
+            android:layout_marginTop="@dimen/space_m">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listMedals"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:scrollbars="none" />
+
+            <LinearLayout
+                android:id="@+id/emptyMedalBarn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imgEmptyMedal"
+                    android:layout_width="@dimen/medal_sprite_size"
+                    android:layout_height="@dimen/medal_sprite_size"
+                    android:alpha="0.3"
+                    android:contentDescription="@string/cd_medal"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/sprite_medal_gold" />
+
+                <TextView
+                    android:id="@+id/txtEmptyMedal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_m"
+                    android:gravity="center"
+                    android:text="@string/medal_barn_empty"
+                    android:textAppearance="@style/TextAppearance.App.Small" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCloseMedalBarn"
+            style="@style/Widget.App.Button.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_secondary_height"
+            android:layout_marginTop="@dimen/space_l"
+            android:text="@string/action_close"
+            app:icon="@drawable/ic_close" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/txtPickerLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/space_m"
+        android:text="@string/piece_picker_label"
+        android:textAppearance="@style/TextAppearance.App.Label" />
+
+    <FrameLayout
+        android:id="@+id/tileStraight"
+        android:layout_width="@dimen/piece_tile_size"
+        android:layout_height="@dimen/piece_tile_size"
+        android:layout_marginEnd="@dimen/space_m"
+        android:background="@drawable/shape_piece_tile"
+        android:foreground="@drawable/ripple_primary">
+
+        <ImageView
+            android:id="@+id/imgTileStraight"
+            android:layout_width="@dimen/piece_sprite_size"
+            android:layout_height="@dimen/piece_sprite_size"
+            android:layout_gravity="center"
+            android:contentDescription="@string/cd_piece_straight"
+            android:scaleType="fitCenter"
+            android:src="@drawable/sprite_plank_straight" />
+
+        <TextView
+            android:id="@+id/badgeStraight"
+            android:layout_width="@dimen/badge_size"
+            android:layout_height="@dimen/badge_size"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/shape_count_badge"
+            android:gravity="center"
+            android:textColor="@color/farm_text_inverse"
+            android:textSize="@dimen/text_label"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/tileCorner"
+        android:layout_width="@dimen/piece_tile_size"
+        android:layout_height="@dimen/piece_tile_size"
+        android:background="@drawable/shape_piece_tile"
+        android:foreground="@drawable/ripple_primary">
+
+        <ImageView
+            android:id="@+id/imgTileCorner"
+            android:layout_width="@dimen/piece_sprite_size"
+            android:layout_height="@dimen/piece_sprite_size"
+            android:layout_gravity="center"
+            android:contentDescription="@string/cd_piece_corner"
+            android:scaleType="fitCenter"
+            android:src="@drawable/sprite_plank_corner" />
+
+        <TextView
+            android:id="@+id/badgeCorner"
+            android:layout_width="@dimen/badge_size"
+            android:layout_height="@dimen/badge_size"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/shape_count_badge"
+            android:gravity="center"
+            android:textColor="@color/farm_text_inverse"
+            android:textSize="@dimen/text_label"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+</merge>
